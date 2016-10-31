@@ -1,2 +1,2 @@
 # Axway
-Axway Academy Node.js 
+Axway Academy Node.js course
