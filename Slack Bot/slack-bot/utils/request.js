@@ -1,6 +1,14 @@
 var request = require('request');
 
-// TODO post request logic
+var notifyServer = function(data, err) {
+    console.log(data.data);
+    request({
+        url: data.url,
+        method: "POST",
+        body: data.data,
+        json: true
+    }, err);
 }
 
-module.exports.notifyHost = notifyHost;
+
+module.exports.notifyServer = notifyServer;
