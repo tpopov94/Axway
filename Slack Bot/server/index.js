@@ -11,8 +11,8 @@ app.get("/", function (req, res) {
 
 // POST method route
 app.post("/", function (req, res) {
-    console.log(res.user);
-    res.send("Post");
+    console.log(req.body);
+    console.log(res.body);
 });
 
 app.listen(2705, function () {
