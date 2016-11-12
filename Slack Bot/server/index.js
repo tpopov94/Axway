@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 });
 
 // POST method route
-app.post("/users", function (req, res) {
+app.post("/", function (req, res) {
     var data = req.body;
 
     console.log(`User: ${data.user} - Email ${data.mail}`)
