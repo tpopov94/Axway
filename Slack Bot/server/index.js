@@ -2,7 +2,12 @@
 /*globals console */
 
 var express = require("express");
+var bodyParser = require('body-parser');
+
 var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // GET method route
 app.get("/", function (req, res) {
@@ -10,9 +15,10 @@ app.get("/", function (req, res) {
 });
 
 // POST method route
-app.post("/", function (req, res) {
-    console.log(req.body);
-    console.log(res.body);
+app.post("/users", function (req, res) {
+    var data = req.body;
+
+    console.log(`User: ${data.user} - Email ${data.mail}`)
 });
 
 app.listen(2705, function () {
